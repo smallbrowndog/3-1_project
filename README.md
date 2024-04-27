@@ -100,7 +100,8 @@ https://github.com/danmadeira/simple-icon-badges
 
 이후에는 데이터를 줄이기 위해 1~5점의 데이터를 각각 2만건씩 추출하려고 했으나 각각 asin을 확인해보니 시계, 후드티, 바지, 필통, 악세사리 등 수 많은 카테고리의 제품들이 있었고,  
 카테고리에 맞는 제품들을 선택하여 추출하여 제품의 카테고리를 일치화 시키는 것과 리뷰데이터의 수도 유지하는 것이 중요하다고 생각했습니다.  
-그래서 대분류라고 할 수 있는 parent_asin에 따른 갯수들을 내림차순으로 정렬해서 50개를 추출해 각각의 parent_asin을 모두 검색해보았습니다.  
+그래서 대분류라고 할 수 있는 parent_asin에 따른 갯수들을 내림차순으로 정렬해서 50개를 추출하였고,  
+각각의 parent_asin을 모두 검색하여 어떤 제품인지 살펴보았습니다.  
 
 |parent_asin|개수|
 |-|-|
@@ -156,6 +157,10 @@ https://github.com/danmadeira/simple-icon-badges
 |B076QD9NP1|741|
 
 
+parent_asin 검색을 통해 원피스, 후드티, 바지 등의 의류들만 모아 다시 데이터를 정했습니다.  
+
+
+
 |       | rating | title                                             | text                                              | images | asin       | parent_asin | user_id                      | timestamp               | helpful_vote |
 |-------|--------|---------------------------------------------------|---------------------------------------------------|--------|------------|-------------|------------------------------|-------------------------|--------------|
 | 0     | 5      | Great! Great!                                     | I absolutely love the color and the thickness.... | []     | B0147ZXS5W | B009R09Z8W  | AGPST67TWB7SFRSPDXCDOB2VHELA | 2019-02-21 06:47:03.912 | 0            |
@@ -172,7 +177,7 @@ https://github.com/danmadeira/simple-icon-badges
 
 28971 rows × 10 columns
 
-parent_asin 검색을 통해 원피스, 후드티, 바지 등의 의류들만 선택하여 28,971건의 데이터로 추려내었습니다.  
+기존 2,337,702건의 데이터에서 28,971건의 데이터로 추려내었습니다.  
 
 
 ### 2-3 추출한 데이터에 대한 탐색적 데이터 분석
