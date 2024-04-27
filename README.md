@@ -52,7 +52,7 @@ https://github.com/danmadeira/simple-icon-badges
 어떤 제품이던지 리뷰가 제품 구매에 끼치는 영향은 아주 크다고 할 수 있습니다.
 리뷰는 
 
-[출처](#https://vreview.tv/blog/content/review-marketing-1)
+[출처](https://vreview.tv/blog/content/review-marketing-1)
 
 ## 2. 데이터
 ### 2-1 원시 데이터
