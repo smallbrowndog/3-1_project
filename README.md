@@ -14,7 +14,20 @@ https://github.com/danmadeira/simple-icon-badges
 <img src="https://img.shields.io/badge/pycharm-%23000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white" />
 </div>
 
-## 1. 개 요 A4용지로 1장정도 (그림포함)
+[1. 개요](#1-개요)
+
+[2. 대표적인 인공지능 API](#2-대표적인-인공지능-api)
+
+- [2.1 구글](#21-구글)
+
+- [2.2 네이버](#22-네이버)
+
+- [2.3 맡김](#23-맡김)
+
+[3. 프로젝트1에서 활용해 볼 API 선정 및 설명](#3-프로젝트1에서-활용해-볼-api-선정-및-설명)
+
+
+## 1. 개요
 ### 1.1 문제 정의
 한류 열풍은 코로나 펜데믹을 계기로 더욱 확산되고 있다. 그 중심에는 KPOP이 주요한 역할을 했는데, 전 세계적으로 KPOP의 시장 규모는 ~~~조 원 이며 지속적으로 성장하고 있다.[[1](https://www.joongang.co.kr/article/25037728)]  이 프로젝트에서는 KPOP의 영향력을 데이터로 분석해보기 위해서 글로벌 최대의 온라인 포럼 중 하나인 reddit에서 KPOP과 관련된 반응을 분석해 보고자 한다. 
 
