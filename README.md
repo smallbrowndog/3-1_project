@@ -77,7 +77,7 @@ https://github.com/danmadeira/simple-icon-badges
   
 |rating|title|text|images|asin|parent_asin|user_id|timestamp|helpful_vote|verified_purchase|
 |---|---|---|---|---|---|---|---|---|---|
-|rating|title|text|images|asin|parent_asin|user_id|timestamp|helpful_vote|verified_purchase|
+|리뷰 점수|리뷰 제목|리뷰 본문|리뷰 사진|제품 ID|제품 상위 ID|리뷰어 ID|리뷰 작성 시간|유용한 리뷰 투표|리뷰어 실구매 여부 확인|
 
 
 기본적인 정보 : 어떠한 데이터인지, 총 데이터 건 수
