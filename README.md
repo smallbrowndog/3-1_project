@@ -179,11 +179,14 @@ parent_asin 검색을 통해 원피스, 후드티, 바지 등의 의류들만 �
 
 위에서 추출한 데이터를 토대로 리뷰의 분포 및 리뷰 본문의 길이를 확인해보았습니다.  
 
-<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/3dfa2ced-8ad4-4100-a654-a8bdb83cf0e1">
-1점이 1526건, 2점이 2073건, 3점이 2510건, 4점이 4242건, 5점이 18620건 인것으로 보아 대부분의 사람들은 높은 점수의 리뷰를 작성한다라는 것을 알 수 있습니다.
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/3dfa2ced-8ad4-4100-a654-a8bdb83cf0e1">  
 
-<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/6bd7f967-b2c0-4759-84a5-e212cbfab5f2">
-위 표를 확인하면 50자 이하의 리뷰가 가장 많았고 이후로는 감소세를 보이고 있습니다.  
+1점이 1526건, 2점이 2073건, 3점이 2510건, 4점이 4242건, 5점이 18620건 인것으로 보아 대부분의 사람들은 높은 점수의 리뷰를 작성한다라는 것을 알 수 있습니다.  
+
+
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/6bd7f967-b2c0-4759-84a5-e212cbfab5f2">  
+
+위 표를 확인하면 50자 이하의 리뷰가 가장 많았고 더 많은 글자를 작성하는 인원의 수는 감소세를 보이고 있습니다.  
 
 
 
