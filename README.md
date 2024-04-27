@@ -33,7 +33,7 @@ https://github.com/danmadeira/simple-icon-badges
 
 [4. MobileBERT 학습 결과](#4-MobileBERT-학습-결과)
 
-[4. 느낀점 및 배운점](#5-느낀점-및-배운점)
+[5. 느낀점 및 배운점](#5-느낀점-및-배운점)
 
 
 ## 1. 개요
