@@ -3,6 +3,7 @@
 badge icon 참고 사이트
 https://github.com/danmadeira/simple-icon-badges
 -->
+<p align="center"><img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/aa832db3-679b-4a38-b144-bc95df425c1e"></p>
 <div align=center><h1>📚 STACKS</h1></div>
 
 <div align=center> 
@@ -13,6 +14,9 @@ https://github.com/danmadeira/simple-icon-badges
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/pycharm-%23000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white" />
 </div>
+
+<details>
+<summary>내용 순서</summary>
 
 [1. 개요](#1-개요)
 
@@ -35,10 +39,12 @@ https://github.com/danmadeira/simple-icon-badges
 
 [5. 느낀점 및 배운점](#5-느낀점-및-배운점)
 
+</details>
+
 
 ## 1. 개요
 ### 1.1 문제 정의
-한류 열풍은 코로나 펜데믹을 계기로 더욱 확산되고 있다. 그 중심에는 KPOP이 주요한 역할을 했는데, 전 세계적으로 KPOP의 시장 규모는 ~~~조 원 이며 지속적으로 성장하고 있다.[[1](https://www.joongang.co.kr/article/25037728)]  이 프로젝트에서는 KPOP의 영향력을 데이터로 분석해보기 위해서 글로벌 최대의 온라인 포럼 중 하나인 reddit에서 KPOP과 관련된 반응을 분석해 보고자 한다. 
+
 
 ### 1.2 뭘까
 KPOP은 우리나라의 강력한 정보통신 인프라와 결합하여, 비대면 공연, 온라인 이벤트 등등의 온라인 기반 산업이 점차 확대되고 있다. 따라서 온라인 상에서 발생하는 다양한 리뷰를 분석하여 KPOP 산업의 발전 방향을 수립하는 것이 매우 중요한 과제일 것이다.
