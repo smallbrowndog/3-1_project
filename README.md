@@ -75,6 +75,7 @@ https://github.com/danmadeira/simple-icon-badges
 - 데이터 정보
   이용한 데이터는 'Amazon_Fashion' 데이터중 'review' 를 사용하였고 1996년 4월부터 2023년 9월까지 작성된 아마존 제품의 리뷰가 모두 작성되어있는 데이터이다.
 |rating|title|text|images|asin|parent_asin|user_id|timestamp|helpful_vote|verified_purchase|
+|---|---|---|---|---|---|---|---|---|---|
 |rating|title|text|images|asin|parent_asin|user_id|timestamp|helpful_vote|verified_purchase|
   
 기본적인 정보 : 어떠한 데이터인지, 총 데이터 건 수
