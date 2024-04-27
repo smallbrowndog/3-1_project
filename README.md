@@ -74,6 +74,8 @@ https://github.com/danmadeira/simple-icon-badges
 |리뷰 점수|리뷰 제목|리뷰 본문|리뷰 사진|제품 ID|제품 상위 ID|리뷰어 ID|리뷰 작성 시간|유용한 리뷰 투표|리뷰어 실구매 여부 확인|
 
 
+[ 데이터 정보 ]
+
 ||rating|title|text|images|asin|parent_asin|user_id|timestamp|helpful_vote|verified_purchase|
 |---|---|---|---|---|---|---|---|---|---|---|
 |0|5|Pretty locket|I think this locket is really pretty. The insi...|[]|B00LOPVX74|B00LOPVX74|AGBFYI2DDIKXC5Y4FARTYDTQBMFQ|2020-01-09 00:06:34.489|3|True|
@@ -91,6 +93,8 @@ https://github.com/danmadeira/simple-icon-badges
 2500939 rows × 10 columns
 
 데이터를 확인해보니 총 2,500,939건의 데이터로 필히 데이터를 줄여야함을 알 수 있습니다.  
+
+### 2-2 추출한 데이터
 우선 실 구매자가 아닌 리뷰어의 데이터를 삭제하여 리뷰의 신뢰성을 높이며 데이터의 수를 줄이고자 하였고  
 이 과정을 통해 기존 2,500,939건에서 2,337,702건으로 약 16만건의 데이터를 삭제하였습니다.  
 
@@ -152,33 +156,36 @@ https://github.com/danmadeira/simple-icon-badges
 |B076QD9NP1|741|
 
 
-||rating|title|text|images|asin|parent_asin|user_id|timestamp|helpful_vote|verified_purchase|
-|0|5|Great! Great!|I absolutely love the color and the thickness....|[]|B0147ZXS5W|B009R09Z8W|AGPST67TWB7SFRSPDXCDOB2VHELA|2019-02-21 06:47:03.912|0|True|
-|1|4|thinner than I would like, but fair for the price|thinner than I would like, but fair for the pr...|[]|B00OEF1Q9G|B009R09Z8W|AFUJBKHTVFITEGJPUVNGG4RBU6SQ|2015-02-03 21:50:44.000|0|True|
-|2|5|Hoddies|These are my favorite hoodies. I must have 12 ...|[]|B00OEZ3716|B009R09Z8W|AHYC43D3W3OSR7CSGZI2FU6IT6ZA|2022-03-24 16:44:26.591|0|True|
-|3|5|Great fit|Love the color and fits well.|[]|B00O558WWY|B009R09Z8W|AG4ES4AI54GK2BFIYT7YZR3YMQXA|2021-06-01 11:48:58.968|1|True|
-|4|5|My son loves it.|My son loves it and wears it constantly. Beefy...|[]|B00MNNIYRS|B009R09Z8W|AGNHNKWELUNPQWDEKHP6J77LF2QA|2016-01-13 05:37:58.000|0|True|
-|...|...|...|...|...|...|...|...|...|...|...|
-|28966|2|Not worth it.|This product was shown as a hot pink pant legg...|[]|B07MHK3FFL|B0BVMLJTFS|AGAEEN6G7BGSKWOBNTT2QTCA2OOA|2020-07-20 14:44:09.297|0|True|
-|28967|5|Great for working out for lounging!|Perfect dupes!|[]|B099F6J13V|B0BVMLJTFS|AEEGB7LM7KCIQGPXP2P3QEGNCIIQ|2022-03-06 19:16:36.298|0|True|
-|28968|5|Buy them|I don’t often leave reviews but I love these s...|[]|B08PXQFPZH|B0BVMLJTFS|AHK4BHCB4PFRBMLHSOKKZKETES4A|2023-01-16 14:38:12.693|0|True|
-|28969|5|Nice!|Super comfy and not see through. Very flatteri...|[]|B07S8PNPM4|B0BVMLJTFS|AGTLALTVF5G43ZR63YUAAPEB7L6A|2019-12-08 03:47:03.011|0|True|
-|28970|5|Happy|Very happy with my delivery and item|[]|B07S8PNPM4|B0BVMLJTFS|AFL3BMW6ZZMWHTXH7KDSUHHHZ2WA|2021-02-07 19:21:37.995|0|True|
+|       | rating | title                                             | text                                              | images | asin       | parent_asin | user_id                      | timestamp               | helpful_vote |
+|-------|--------|---------------------------------------------------|---------------------------------------------------|--------|------------|-------------|------------------------------|-------------------------|--------------|
+| 0     | 5      | Great! Great!                                     | I absolutely love the color and the thickness.... | []     | B0147ZXS5W | B009R09Z8W  | AGPST67TWB7SFRSPDXCDOB2VHELA | 2019-02-21 06:47:03.912 | 0            |
+| 1     | 4      | thinner than I would like, but fair for the price | thinner than I would like, but fair for the pr... | []     | B00OEF1Q9G | B009R09Z8W  | AFUJBKHTVFITEGJPUVNGG4RBU6SQ | 2015-02-03 21:50:44.000 | 0            |
+| 2     | 5      | Hoddies                                           | These are my favorite hoodies. I must have 12 ... | []     | B00OEZ3716 | B009R09Z8W  | AHYC43D3W3OSR7CSGZI2FU6IT6ZA | 2022-03-24 16:44:26.591 | 0            |
+| 3     | 5      | Great fit                                         | Love the color and fits well.                     | []     | B00O558WWY | B009R09Z8W  | AG4ES4AI54GK2BFIYT7YZR3YMQXA | 2021-06-01 11:48:58.968 | 1            |
+| 4     | 5      | My son loves it.                                  | My son loves it and wears it constantly. Beefy... | []     | B00MNNIYRS | B009R09Z8W  | AGNHNKWELUNPQWDEKHP6J77LF2QA | 2016-01-13 05:37:58.000 | 0            |
+| ...   | ...    | ...                                               | ...                                               | ...    | ...        | ...         | ...                          | ...                     | ...          |
+| 28966 | 2      | Not worth it.                                     | This product was shown as a hot pink pant legg... | []     | B07MHK3FFL | B0BVMLJTFS  | AGAEEN6G7BGSKWOBNTT2QTCA2OOA | 2020-07-20 14:44:09.297 | 0            |
+| 28967 | 5      | Great for working out for lounging!               | Perfect dupes!                                    | []     | B099F6J13V | B0BVMLJTFS  | AEEGB7LM7KCIQGPXP2P3QEGNCIIQ | 2022-03-06 19:16:36.298 | 0            |
+| 28968 | 5      | Buy them                                          | I don’t often leave reviews but I love these s... | []     | B08PXQFPZH | B0BVMLJTFS  | AHK4BHCB4PFRBMLHSOKKZKETES4A | 2023-01-16 14:38:12.693 | 0            |
+
 
 
 28971 rows × 10 columns
 
+parent_asin 검색을 통해 원피스, 후드티, 바지 등의 의류들만 선택하여 28,971건의 데이터로 추려내었습니다.  
 
-기본적인 정보 : 어떠한 데이터인지, 총 데이터 건 수
-
-### 2-2 추출한 데이터
-대량의 데이터에서 관심 영역을 추출한다. (5만 ~ 10만건)
-최소 2만건
 
 ### 2-3 추출한 데이터에 대한 탐색적 데이터 분석
-1~5점 척도인 경우에는 분포
-리뷰 문장의 길이
-연도별, 장소별 등등 데이터의 부가정보를 바탕으로 데이터를 탐색 (pandas, matplotlib)
+
+위에서 추출한 데이터를 토대로 리뷰의 분포 및 리뷰 본문의 길이를 확인해보았습니다.  
+
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/3dfa2ced-8ad4-4100-a654-a8bdb83cf0e1">
+1점이 1526건, 2점이 2073건, 3점이 2510건, 4점이 4242건, 5점이 18620건 인것으로 보아 대부분의 사람들은 높은 점수의 리뷰를 작성한다라는 것을 알 수 있습니다.
+
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/6bd7f967-b2c0-4759-84a5-e212cbfab5f2">
+위 표를 확인하면 50자 이하의 리뷰가 가장 많았고 이후로는 감소세를 보이고 있습니다.  
+
+
 
 ## 3. 학습 데이터 구축
 
