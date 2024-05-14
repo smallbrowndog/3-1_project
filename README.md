@@ -102,87 +102,47 @@ https://github.com/danmadeira/simple-icon-badges
 
 ### 2-2 추출한 데이터
 
-우선 실 구매자가 아닌 리뷰어의 데이터를 삭제하여 리뷰의 신뢰성을 높이며 데이터의 수를 줄이고자 하였고  
+우선 실 구매자가 아닌 리뷰어의 데이터를 삭제하여 리뷰의 신뢰성을 높이며 데이터의 수를 줄이고자 하였고
 이 과정을 통해 기존 2,500,939건에서 2,337,702건으로 약 16만건의 데이터를 삭제하였다.  
 
-이후에는 데이터를 줄이기 위해 1~5점의 데이터를 각각 2만건씩 추출하려고 했으나 각각 asin을 확인해보니 시계, 후드티, 바지, 필통, 악세사리 등 수 많은 카테고리의 제품들이 있었고,  
-카테고리에 맞는 제품들을 선택하여 추출하여 제품의 카테고리를 일치화 시키는 것과 리뷰데이터의 수도 유지하는 것이 중요하다고 생각했습니다.  
-그래서 대분류라고 할 수 있는 parent_asin에 따른 갯수들을 내림차순으로 정렬해서 50개를 추출하였고,  
-각각의 parent_asin을 모두 검색하여 어떤 제품인지 살펴보았다.  
+이후에는 카테고리가 맞는 제품들을 선택하여 추출해 제품의 카테고리를 일치화 시키는 것과 리뷰데이터의 수도 유지하는 것이 중요하다고 생각했다.
+그래서 대분류라고 할 수 있는 parent_asin에 따른 갯수들을 내림차순으로 정렬해서 50개를 추출하였고,
+각각의 아래에 정리된 parent_asin을 모두 검색하여 어떤 제품인지 살펴보았다.  
 
-|parent_asin|개수|
-|-|-|
-|B09TXZHKLG|7202|
-|B09KHSM7BB|6206|
-|B09M6X79V9|4033|
-|B07GKLQ5KV|3364|
-|B09H6MXJ71|3084|
-|B084RYPGXN|2600|
-|B09WJSHQFL|2474|
-|B09QFJGKM5|2354|
-|B07CQ84KLT|2060|
-|B07BM9GWG7|1945|
-|B07JWLTCLX|1820|
-|B0BVMLJTFS|1616|
-|B0C4WSH5LC|1549|
-|B09Y3TXYF1|1509|
-|B0045H0L1W|1482|
-|B07VPGY6FX|1375|
-|B01GKAEC6Q|1348|
-|B0C3G9447V|1345|
-|B08F1V3KB9|1338|
-|B06W57G8QX|1265|
-|B0B2KL8C8Q|1236|
-|B07Q2QT2SK|1212|
-|B088K6Y2WG|1187|
-|B079RMS9ZG|1164|
-|B06XWK1RCB|1164|
-|B0B16Q1854|1160|
-|B009R09Z8W|1140|
-|B09TXPYLQF|1084|
-|B0B12PBSTG|1071|
-|B0871C2SJJ|1071|
-|B09JB3B36S|1062|
-|B0928FSGGD|1051|
-|B07FCW972S|1032|
-|B09MJ6NSNM|1022|
-|B084LJ5ZJ5|953|
-|B097RFTKJP|899|
-|B0BL8ZHRMZ|898|
-|B07BMCRRYG|884|
-|B0B14FJ5SS|876|
-|B07XD71F1H|859|
-|B07CM4C9BD|845|
-|B07PHW2CWH|823|
-|B076MYYDLZ|803|
-|B07YSSNLSW|788|
-|B01JUP0DLQ|784|
-|B07BJ9G6Q9|765|
-|B07S8KMCQW|751|
-|B00QETU2MM|750|
-|B08HM3Y85H|748|
-|B076QD9NP1|741|
-
-
-parent_asin 검색을 통해 원피스, 후드티, 바지 등의 의류들만 모아 다시 데이터를 정했다.  
+| parent_asin | 개수 |            |      |            |      |            |      |            |      |
+|-------------|------|------------|------|------------|------|------------|------|------------|------|
+| B09TXZHKLG  | 7202 | B07JWLTCLX | 1820 | B0B2KL8C8Q | 1236 | B09JB3B36S | 1062 | B07CM4C9BD | 845  |
+| B09KHSM7BB  | 6206 | B0BVMLJTFS | 1616 | B07Q2QT2SK | 1212 | B0928FSGGD | 1051 | B07PHW2CWH | 823  |
+| B09M6X79V9  | 4033 | B0C4WSH5LC | 1549 | B088K6Y2WG | 1187 | B07FCW972S | 1032 | B076MYYDLZ | 803  |
+| B07GKLQ5KV  | 3364 | B09Y3TXYF1 | 1509 | B079RMS9ZG | 1164 | B09MJ6NSNM | 1022 | B07YSSNLSW | 788  |
+| B09H6MXJ71  | 3084 | B0045H0L1W | 1482 | B06XWK1RCB | 1164 | B084LJ5ZJ5 | 953  | B01JUP0DLQ | 784  |
+| B084RYPGXN  | 2600 | B07VPGY6FX | 1375 | B0B16Q1854 | 1160 | B097RFTKJP | 899  | B07BJ9G6Q9 | 765  |
+| B09WJSHQFL  | 2474 | B01GKAEC6Q | 1348 | B009R09Z8W | 1140 | B0BL8ZHRMZ | 898  | B07S8KMCQW | 751  |
+| B09QFJGKM5  | 2354 | B0C3G9447V | 1345 | B09TXPYLQF | 1084 | B07BMCRRYG | 884  | B00QETU2MM | 750  |
+| B07CQ84KLT  | 2060 | B08F1V3KB9 | 1338 | B0B12PBSTG | 1071 | B0B14FJ5SS | 876  | B08HM3Y85H | 748  |
+| B07BM9GWG7  | 1945 | B06W57G8QX | 1265 | B0871C2SJJ | 1071 | B07XD71F1H | 859  | B076QD9NP1 | 741  |
 
 
 
-|       | rating | title                                             | text                                              | images | asin       | parent_asin | user_id                      | timestamp               | helpful_vote |
-|-------|--------|---------------------------------------------------|---------------------------------------------------|--------|------------|-------------|------------------------------|-------------------------|--------------|
-| 0     | 5      | Great! Great!                                     | I absolutely love the color and the thickness.... | []     | B0147ZXS5W | B009R09Z8W  | AGPST67TWB7SFRSPDXCDOB2VHELA | 2019-02-21 06:47:03.912 | 0            |
-| 1     | 4      | thinner than I would like, but fair for the price | thinner than I would like, but fair for the pr... | []     | B00OEF1Q9G | B009R09Z8W  | AFUJBKHTVFITEGJPUVNGG4RBU6SQ | 2015-02-03 21:50:44.000 | 0            |
-| 2     | 5      | Hoddies                                           | These are my favorite hoodies. I must have 12 ... | []     | B00OEZ3716 | B009R09Z8W  | AHYC43D3W3OSR7CSGZI2FU6IT6ZA | 2022-03-24 16:44:26.591 | 0            |
-| 3     | 5      | Great fit                                         | Love the color and fits well.                     | []     | B00O558WWY | B009R09Z8W  | AG4ES4AI54GK2BFIYT7YZR3YMQXA | 2021-06-01 11:48:58.968 | 1            |
-| 4     | 5      | My son loves it.                                  | My son loves it and wears it constantly. Beefy... | []     | B00MNNIYRS | B009R09Z8W  | AGNHNKWELUNPQWDEKHP6J77LF2QA | 2016-01-13 05:37:58.000 | 0            |
-| ...   | ...    | ...                                               | ...                                               | ...    | ...        | ...         | ...                          | ...                     | ...          |
-| 28966 | 2      | Not worth it.                                     | This product was shown as a hot pink pant legg... | []     | B07MHK3FFL | B0BVMLJTFS  | AGAEEN6G7BGSKWOBNTT2QTCA2OOA | 2020-07-20 14:44:09.297 | 0            |
-| 28967 | 5      | Great for working out for lounging!               | Perfect dupes!                                    | []     | B099F6J13V | B0BVMLJTFS  | AEEGB7LM7KCIQGPXP2P3QEGNCIIQ | 2022-03-06 19:16:36.298 | 0            |
-| 28968 | 5      | Buy them                                          | I don’t often leave reviews but I love these s... | []     | B08PXQFPZH | B0BVMLJTFS  | AHK4BHCB4PFRBMLHSOKKZKETES4A | 2023-01-16 14:38:12.693 | 0            |
+
+아마존 사이트에서 직접 검색을 통해 원피스, 후드티, 바지 등의 의류들만 모아 다시 데이터를 정했고 images, user_id, verified_purchase는 삭제하여 새로운 데이터셋을 만들었다.  
 
 
+|       | rating | title                                             | text                                              | asin       | parent_asin | timestamp               | helpful_vote  |
+|-------|--------|---------------------------------------------------|---------------------------------------------------|------------|-------------|-------------------------|---------------|
+| 0     | 5      | Great! Great!                                     | I absolutely love the color and the thickness.... | B0147ZXS5W | B009R09Z8W  | 2019-02-21 06:47:03.912 | 0             |
+| 1     | 4      | thinner than I would like, but fair for the price | thinner than I would like, but fair for the pr... | B00OEF1Q9G | B009R09Z8W  | 2015-02-03 21:50:44.000 | 0             |
+| 2     | 5      | Hoddies                                           | These are my favorite hoodies. I must have 12 ... | B00OEZ3716 | B009R09Z8W  | 2022-03-24 16:44:26.591 | 0             |
+| 3     | 5      | Great fit                                         | Love the color and fits well.                     | B00O558WWY | B009R09Z8W  | 2021-06-01 11:48:58.968 | 1             |
+| 4     | 5      | My son loves it.                                  | My son loves it and wears it constantly. Beefy... | B00MNNIYRS | B009R09Z8W  | 2016-01-13 05:37:58.000 | 0             |
+| ...   | ...    | ...                                               | ...                                               | ...        | ...         | ...                     | ...           |
+| 28966 | 2      | Not worth it.                                     | This product was shown as a hot pink pant legg... | B07MHK3FFL | B0BVMLJTFS  | 2020-07-20 14:44:09.297 | 0             |
+| 28967 | 5      | Great for working out for lounging!               | Perfect dupes!                                    | B099F6J13V | B0BVMLJTFS  | 2022-03-06 19:16:36.298 | 0             |
+| 28968 | 5      | Buy them                                          | I don’t often leave reviews but I love these s... | B08PXQFPZH | B0BVMLJTFS  | 2023-01-16 14:38:12.693 | 0             |
+| 28969 | 5      | Nice!                                             | Super comfy and not see through. Very flatteri... | B07S8PNPM4 | B0BVMLJTFS  | 2019-12-08 03:47:03.011 | 0             |
+| 28970 | 5      | Happy                                             | Very happy with my delivery and item              | B07S8PNPM4 | B0BVMLJTFS  | 2021-02-07 19:21:37.995 | 0             |
 
-28971 rows × 10 columns
+28971 rows × 7 columns
 
 기존 2,337,702건의 데이터에서 28,971건의 데이터로 추려내었다.  
 
@@ -197,7 +157,7 @@ parent_asin 검색을 통해 원피스, 후드티, 바지 등의 의류들만 �
 5점을 부여한 데이터가 많은 것으로보아 대부분의 사람들은 높은 점수의 리뷰를 작성한다라는 것을 알 수 있었다.  
 
 
-<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/6bd7f967-b2c0-4759-84a5-e212cbfab5f2">  
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/d8b57e69-f6b4-4e1f-b424-4034aa426755">  
 
 위 표를 확인하면 50자 이하의 리뷰가 가장 많았고 더 많은 글자를 작성하는 인원의 수는 감소세를 보이고 있다.  
 
