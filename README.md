@@ -196,8 +196,13 @@ https://github.com/danmadeira/simple-icon-badges
 
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/16a682c7-47f6-4182-80f1-776834fcb21b">  
 
-
 5점을 부여한 데이터가 많은 것으로보아 대부분의 사람들은 높은 점수의 리뷰를 작성한다라는 것을 알 수 있었다.  
+
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/006ea400-087f-4a9e-b5c8-8a2cf4bf4dba">  
+
+이후 3점 이하의 리뷰는 부정, 4점 이상의 리뷰는 긍정으로 분류하여 분포를 살펴보았다.
+3점의 리뷰는 대체로 부정적인 리뷰들이 많아 부정으로 분류하였다.
+
 
 
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/90007d4f-ef26-4bba-a572-2d1dba56dd6a">  
@@ -205,6 +210,9 @@ https://github.com/danmadeira/simple-icon-badges
 
 
 위 표를 확인하면 50자 이하의 리뷰가 가장 많았고 더 많은 글자를 작성하는 인원의 수는 감소세를 보이고 있다.  
+
+
+
 
 
 
