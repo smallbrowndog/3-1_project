@@ -27,7 +27,7 @@ https://github.com/danmadeira/simple-icon-badges
 
 [2. 데이터](#2-데이터)
 
-- [2-1 원시 데이터 및 데이터 구성](#2-1-원시-데이터-및-데이터-구성)
+- [2-1 원시 데이터 정보](#2-1-원시-데이터-정보)
 
 - [2-2 추출한 데이터](#2-2-추출한-데이터)
 
@@ -180,10 +180,24 @@ https://github.com/danmadeira/simple-icon-badges
 | 30877 | 5      | These pants are amazing              | Love these pants! So comfortable. Love the h...   |
 
 
-30878 rows × 4 columns
-
+30878 rows × 4 columns  
 기존 2,337,702건의 데이터에서 30,878건의 데이터로 추려내었다.  
 
+title, text 데이터를 살펴보니 title에도 유의미한 단어가 있고 text에는 빈 값이 존재하는걸 확인하여 tot_text로 두 열을 병합하였다.
+tot_text에 있던 빈 값을 삭제하였다.
+
+이후 3점 이하의 리뷰는 부정, 4점 이상의 리뷰는 긍정으로 분류하여 pos_neg로 추가하였다.
+3점의 리뷰는 대체로 부정적인 리뷰들이 많아 부정으로 분류하였다.
+
+|       | rating | parent_asin | pos_neg | tot_text                                          |
+|-------|--------|-------------|---------|---------------------------------------------------|
+| 0     | 5      | B009R09Z8W  | 1       | Nice quality product Great product                |
+| 1     | 5      | B009R09Z8W  | 1       | Five Stars Good product                           |
+| 2     | 4      | B009R09Z8W  | 1       | Good material, true to size Ordered neon green... |
+| ...   | ...    | ...         | ...     | ...                                               |
+| 30864 | 5      | B0BVMLJTFS  | 1       | These pants are amazing Love these pants! So ...  |
+30865 rows × 5 columns  
+위 같이 학습을 위한 데이터 전처리를 마쳤다.
 
 ### 2-3 추출한 데이터에 대한 탐색적 데이터 분석
 
@@ -207,15 +221,16 @@ https://github.com/danmadeira/simple-icon-badges
 
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/006ea400-087f-4a9e-b5c8-8a2cf4bf4dba">  
 
-이후 3점 이하의 리뷰는 부정, 4점 이상의 리뷰는 긍정으로 분류하여 분포를 살펴보았다.
-3점의 리뷰는 대체로 부정적인 리뷰들이 많아 부정으로 분류하였다.
+긍정과 부정 리뷰의 분포를 살펴보니 3.37:1의 불균형한 모습을 볼 수 있다.
+
+
 
 
 ## 3. 학습 데이터 구축
 
 위의 그래프를 확인해보면 긍정 23,826개, 부정 7,052개의 데이터가 있는걸 확인할 수 있다.
-데이터가 3.37:1로 불균형하기 때문에 긍, 부정 데이터를 동일 비율로 추출하고자 한다.
-긍, 부정 70퍼센트씩 동일한 비율로 추출하여 학습데이터로 설했다.
+데이터가 불균형하기 때문에 긍, 부정 데이터를 동일 비율로 추출하고자 한다.
+긍, 부정 70퍼센트씩 동일한 비율로 추출하여 학습데이터로 설정했다.
 
 ## 4. MobileBERT 학습 결과
 
