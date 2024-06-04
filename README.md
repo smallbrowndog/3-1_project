@@ -196,6 +196,7 @@ tot_text에 있던 빈 값을 삭제하였다.
 | 2     | 4      | B009R09Z8W  | 1       | Good material, true to size Ordered neon green... |
 | ...   | ...    | ...         | ...     | ...                                               |
 | 30864 | 5      | B0BVMLJTFS  | 1       | These pants are amazing Love these pants! So ...  |
+
 30865 rows × 5 columns  
 위 같이 학습을 위한 데이터 전처리를 마쳤다.
 
@@ -204,8 +205,7 @@ tot_text에 있던 빈 값을 삭제하였다.
 
 위에서 추출한 데이터를 토대로 리뷰의 분포 및 리뷰 본문의 길이를 확인해보았다.  
 
-
-<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/16a682c7-47f6-4182-80f1-776834fcb21b">  
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/71f85637-676c-4119-8b81-4ba5dbb28696">  
 
 5점을 부여한 데이터가 많은 것으로보아 대부분의 사람들은 높은 점수의 리뷰를 작성한다라는 것을 알 수 있었다.  
 
@@ -219,7 +219,8 @@ tot_text에 있던 빈 값을 삭제하였다.
 
 
 
-<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/006ea400-087f-4a9e-b5c8-8a2cf4bf4dba">  
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/ecabceee-12e3-43e4-8060-e382eefabbd3">  
+
 
 긍정과 부정 리뷰의 분포를 살펴보니 3.37:1의 불균형한 모습을 볼 수 있다.
 
