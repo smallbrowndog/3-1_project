@@ -8,16 +8,16 @@ from transformers import get_linear_schedule_with_warmup, logging
 import time
 import datetime
 
-PA_fin_df = pd.read_csv('project.csv')
-PA_fin_df['tot_text'] = np.where(PA_fin_df['text'].isna(), PA_fin_df['title'],
-                                PA_fin_df['title'] + ' ' + PA_fin_df['text'])
-filtered_df = PA_fin_df.dropna(subset=['tot_text'])
-# 열 삭제 후 새 DataFrame 생성
-df_without_cols = filtered_df.drop(['title', 'text', 'Unnamed: 0'], axis=1)
-# 수정된 DataFrame을 filtered_df에 할당
-filtered_df = df_without_cols
-filtered_df.to_csv('project_tot_text.csv')
-PA_fin_df = pd.read_csv('project_tot_text.csv')
+# PA_fin_df = pd.read_csv('project.csv')
+# PA_fin_df['tot_text'] = np.where(PA_fin_df['text'].isna(), PA_fin_df['title'],
+#                                 PA_fin_df['title'] + ' ' + PA_fin_df['text'])
+# filtered_df = PA_fin_df.dropna(subset=['tot_text'])
+# # 열 삭제 후 새 DataFrame 생성
+# df_without_cols = filtered_df.drop(['title', 'text', 'Unnamed: 0'], axis=1)
+# # 수정된 DataFrame을 filtered_df에 할당
+# filtered_df = df_without_cols
+# filtered_df.to_csv('project_tot_text.csv')
+PA_fin_df = pd.read_csv('train_percent.csv')
 
 # 입력이 될 데이터
 data_X = list(PA_fin_df['tot_text'].values)
