@@ -231,17 +231,19 @@ tot_text에 있던 빈 값을 삭제하였다.
 
 위의 그래프를 확인해보면 긍정 23,826개, 부정 7,052개의 데이터가 있는걸 확인할 수 있다.
 데이터가 불균형하기 때문에 긍, 부정 데이터를 동일 비율로 추출하고자 한다.
-긍, 부정 70퍼센트씩 동일한 비율로 추출하여 학습데이터로 설정했다.
-70퍼센트씩 추출한 학습 결과는 Validation accuracy: 0.9328304597701149으로 나왔고 임의로 각 2000개의 데이터를 추출한 학습 결과  
+긍, 부정 70퍼센트씩 동일한 비율로 추출하여 학습데이터로 설정했다.  
+
+## 4. MobileBERT 학습 결과
+
+70퍼센트씩 추출한 학습 결과  
+<img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/abcff118-7b08-4254-93dc-2f69c6b98abe">  
+임의로 각 2000개의 데이터를 추출한 학습 결과  
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/0e660755-f0ca-4237-8d5d-54ae4e179940">  
-해당 데이터들을 활용해 학습해보겠다.
+위 결과들에 약간의 차이가 있지만 해당 학습 결과 두개 모두를 활용해 결과를 예측해보겠다.
 
 70퍼센트씩 추출해 학습하여 결과를 예측했을때는  
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/618a2e71-0919-433d-bf6f-eeac4fafeaae">  
 각 2000개씩, 총 4000개를 추출해 학습하여 결과를 예측했을때  
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/10a099bf-d777-4b8a-9022-2b7b5fa305d7">
-
-
-## 4. MobileBERT 학습 결과
 
 ## 5. 느낀점 및 배운점
