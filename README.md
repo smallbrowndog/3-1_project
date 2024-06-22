@@ -235,11 +235,6 @@ tot_text에 있던 빈 값을 삭제하였다.
 
 ## 4. MobileBERT 학습 결과
 
-[ 개발환경 ]
-  
-
-[ 패키지 ]
-     
 
 70퍼센트씩 추출한 학습 결과이다.  
 <img src="https://github.com/smallbrowndog/3-1_project/assets/136410944/abcff118-7b08-4254-93dc-2f69c6b98abe">  
